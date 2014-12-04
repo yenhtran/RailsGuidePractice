@@ -2,7 +2,7 @@
 
 <%= form_for :post, url: posts_path do |f| %>
 	<p>
-		<%= f.label :table %><br>
+		<%= f.label :title %><br>
 		<%= f.text_field :title %>
 	</p>
 
@@ -15,4 +15,6 @@
 		<%= f.submit %>
 	</p>
 <% end %>
+
+<%= link_to 'Back', posts_path %>
 
