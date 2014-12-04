@@ -6,9 +6,14 @@ class PostsController < ApplicationController
 	def create 
 		# render text: params[:post].inspect -> USED TO RENDER HTML TEXT TO PAGE
 
-		@post = Post.new(params[:post_params])
+		@post = Post.new(post_params)
+
 		@post.save
 		redirect_to @post
+	end
+
+	def show
+		@post = Post.find(params[:id])
 	end
 
 	private
